@@ -1,0 +1,100 @@
+<hmtl>
+
+<head>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/my.css" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Title</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>
+
+
+	<div class="container">
+
+		<div class="jumbotron">
+			<div class="container introductionText">
+				<h1 class="lead">00:00</h1>
+			</div>
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="Describe what you're doing ... " name="eventType" onchange="processText(this.value)">
+		</div>
+		<h3>dsadas <span class="badge">dafuc</span></h3>
+		<h3> dsadas <span class="label label-info">33</span></h3>
+
+		<p id="test" > long text </p>
+		<p>
+		<p>
+
+		<button type="button" class="btn btn-primary" onclick="addLabel()"> Add Label </button>
+		<button type="button" class="btn btn-danger" onclick="removeLabel()"> Remove Label </button>
+
+		<p><p>
+
+		<button type="button" class="btn btn-primary" onclick="addBadge()"> Add Badge </button>
+		<button type="button" class="btn btn-danger" onclick="removeBadge()"> Remove Badge </button>
+
+	</div><!-- /.container -->
+
+	<div class="centerAlignment">
+		<div class="progress progress-striped active">
+			<div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="80" style="width: 45%">
+				<span class="sr-only">45% Complete</span>
+			</div>
+		</div>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function addLabel ()
+		{
+			$("#test").addClass ( "label label-info" ) ;
+		}
+		function removeLabel ()
+		{
+			$("#test").removeClass ( "label label-info" ) ;
+		}
+
+		function addBadge ()
+		{
+			$("#test").addClass ( "badge" ) ;
+		}
+
+		function removeBadge ()
+		{
+			$("#test").removeClass ( "badge" ) ;
+		}
+
+
+		function processText ( q )
+		{
+			console.log ( q ) ;
+			$("#eventType").val ( "33" ) ;
+		}
+
+
+	</script>
+
+	<script src="js/bootstrap.min.js"></script>
+
+</body>
+</htmL>
