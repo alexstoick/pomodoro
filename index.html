@@ -39,50 +39,10 @@
 
 		</div>
 
-
-
-		<p id="test" > long textdsadsa  </p>
-		<p>
-		<p>
-
-		<button type="button" class="btn btn-primary" onclick="addLabel()"> Add Label </button>
-		<button type="button" class="btn btn-danger" onclick="removeLabel()"> Remove Label </button>
-
-		<p><p>
-
-		<button type="button" class="btn btn-primary" onclick="addBadge()"> Add Badge </button>
-		<button type="button" class="btn btn-danger" onclick="removeBadge()"> Remove Badge </button>
-
 	</div><!-- /.container -->
-
-	<div class="centerAlignment">
-		<div class="progress progress-striped active">
-			<div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="80" style="width: 45%">
-				<span class="sr-only">45% Complete</span>
-			</div>
-		</div>
-	</div>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript">
-		function addLabel ()
-		{
-			$("#test").addClass ( "label label-info" ) ;
-		}
-		function removeLabel ()
-		{
-			$("#test").removeClass ( "label label-info" ) ;
-		}
-
-		function addBadge ()
-		{
-			$("#test").addClass ( "badge" ) ;
-		}
-
-		function removeBadge ()
-		{
-			$("#test").removeClass ( "badge" ) ;
-		}
 
 		var last_text = "" ;
 
@@ -90,7 +50,7 @@
 		{
 			var text = $("#eventType").text();
 			var length = text.length ;
-			
+
 			if ( text == last_text )
 				return ;
 
@@ -100,9 +60,7 @@
 				console.log ( "victorie" ) ;
 
 			var html = $("#eventType").html();
-			//console.log ( html ) ;
-			//console.log ( text[text.length-1] ) ;
-			//$("#eventType").val ( "<span" ) ;
+
 		}
 
 
