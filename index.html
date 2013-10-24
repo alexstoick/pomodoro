@@ -35,13 +35,16 @@
 				<h1 class="lead">00:00</h1>
 			</div>
 
-		<div id="eventType" class="editableBox" onkeyup="processText();" contenteditable="true"><span class="label label-info">abc</span> dsa</div>
+		<div id="eventType" class="editableBox" onkeyup="processText();" contenteditable="true"></div>
 
 		</div>
 
 	</div><!-- /.container -->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+
 	<script type="text/javascript">
 
 		var last_text = "" ;
@@ -52,15 +55,32 @@
 			var length = text.length ;
 
 			if ( text == last_text )
+			{
+				console.log ( "No change" ) ;
 				return ;
-
-			console.log ( text ) ;
-
-			if ( text[length-1] == "#" )
-				console.log ( "victorie" ) ;
+			}
+			last_text = text ;
 
 			var html = $("#eventType").html();
+			console.log ( html ) ;
 
+
+			if ( text[length-1] == "#" )
+			{
+				//wrap the last # with <span class="label label-info"
+				html = html.slice ( 0 , html.length -1 ) ;
+				console.log ( html ) ;
+
+				html += "<a class='label label-info prettyLink'> </a>" ;
+				console.log ( html ) ;
+				$("#eventType").html ( html ) ;
+			}
+
+			console.log ( "ultimul caract " + text[length-1] ) ;
+			if ( /\s+$/.test(text) )
+			{
+				console.log ( "surprise" ) ;
+			}
 		}
 
 

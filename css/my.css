@@ -29,3 +29,8 @@
 	direction: ltr;
 	unicode-bidi: embed;
 }
+
+.prettyLink:hover {
+	text-decoration: none !important;
+	color: #FFF ;
+}
