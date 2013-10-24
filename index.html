@@ -34,14 +34,14 @@
 			<div class="container introductionText">
 				<h1 class="lead">00:00</h1>
 			</div>
-		</div>
-		<div class="form-group">
-			<input type="text" class="form-control" placeholder="Describe what you're doing ... " name="eventType" onchange="processText(this.value)">
-		</div>
-		<h3>dsadas <span class="badge">dafuc</span></h3>
-		<h3> dsadas <span class="label label-info">33</span></h3>
 
-		<p id="test" > long text </p>
+		<div id="eventType" class="editableBox" onkeyup="processText();" contenteditable="true"><span class="label label-info">abc</span> dsa</div>
+
+		</div>
+
+
+
+		<p id="test" > long textdsadsa  </p>
 		<p>
 		<p>
 
@@ -84,11 +84,25 @@
 			$("#test").removeClass ( "badge" ) ;
 		}
 
+		var last_text = "" ;
 
-		function processText ( q )
+		function processText ( )
 		{
-			console.log ( q ) ;
-			$("#eventType").val ( "33" ) ;
+			var text = $("#eventType").text();
+			var length = text.length ;
+			
+			if ( text == last_text )
+				return ;
+
+			console.log ( text ) ;
+
+			if ( text[length-1] == "#" )
+				console.log ( "victorie" ) ;
+
+			var html = $("#eventType").html();
+			//console.log ( html ) ;
+			//console.log ( text[text.length-1] ) ;
+			//$("#eventType").val ( "<span" ) ;
 		}
 
 
